@@ -50,7 +50,7 @@ Contributions to TimeKeeper Conky are welcome! If you have any improvements, bug
 
 # Credits
 
-TimeKeeper Conky is created and maintained by PaNDa2Code.
+TimeKeeper Conky is created by PaNDa2Code.
 
 
 ## Enjoy the stylish TimeKeeper Conky clock skin on your Linux desktop!
