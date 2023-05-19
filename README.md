@@ -34,7 +34,7 @@ cd timekeeper-conky
 
 The TimeKeeper Conky clock skin will be installed, and Conky will be launched with the configured settings next time you boot up.
 
-### if that didn't work and u want to Temporarily run it:
+### if that didn't work and you want to Temporarily run it:
 
 keep in the same directory <kbd>timekeeper-conky</kbd> and run
 
