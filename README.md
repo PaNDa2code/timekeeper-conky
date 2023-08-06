@@ -2,7 +2,7 @@
 
 TimeKeeper Conky is a clock skin designed for Linux systems using Conky. It provides a stylish and customizable clock display for your desktop.
 
-![Alt text](/photo/Screenshot.png "screen shot")
+![Alt text](/photo/Screenshot_2023-08-06_20_34_54.png "screen shot")
 
 ## Installation
 
