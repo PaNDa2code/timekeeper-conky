@@ -24,21 +24,27 @@ else
     echo "Fonts directory not found. Skipping font installation."
 fi
 
-# Create a Conky directory in the user's configuration directory
-CONKY_CONFIG_DIR="$HOME_DIR/.config/conky"
-mkdir -p "$CONKY_CONFIG_DIR"
+mkdir ~/.conky
+cp timekeeper_conky.conf ~/.conky
 
-# Copy the Conky configuration file to the Conky directory
-cp "timekeeper_conky.conf" "$CONKY_CONFIG_DIR/timekeeper_conky.conf"
+# Define the line you want to add to the .profile file
+LINE_TO_ADD="conky -c ~/.conky/timekeeper_conky.conf"
 
-# Create a desktop entry file for autostart
-DESKTOP_FILE="$HOME_DIR/.config/autostart/timekeeperconky.desktop"
-echo "[Desktop Entry]
-Name=Timekeeper Conky
-Exec=$CONKY_EXECUTABLE -c $CONKY_CONFIG_DIR/timekeeper_conky.conf
-Type=Application" > "$DESKTOP_FILE"
-
-# Set executable permissions for the desktop entry file
-chmod +x "$DESKTOP_FILE"
+# Check if .profile file exists in the home directory
+if [ -f "$HOME/.profile" ]; then
+    # Add the line to the .profile file if it's not already there
+    if ! grep -q "$LINE_TO_ADD" "$HOME/.profile"; then
+        echo "Adding the line to .profile..."
+        echo "$LINE_TO_ADD" >> "$HOME/.profile"
+        echo "Line added successfully!"
+    else
+        echo "The line is already present in .profile."
+    fi
+else
+    # If .profile doesn't exist, create it and add the line
+    echo "Creating .profile and adding the line..."
+    echo "$LINE_TO_ADD" > "$HOME/.profile"
+    echo ".profile created, and the line added successfully!"
+fi
 
 echo "Timekeeper Conky configuration and fonts installed successfully."
