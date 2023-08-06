@@ -29,6 +29,7 @@ cd timekeeper-conky
 4. Run the installation script:
 
 ```
+chmod +x install.sh
 ./install.sh
 ```
 
