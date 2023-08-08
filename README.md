@@ -29,8 +29,7 @@ cd timekeeper-conky
 4. Run the installation script:
 
 ```
-chmod +x install.sh
-./install.sh
+chmod +x install.sh && ./install.sh
 ```
 
 The TimeKeeper Conky clock skin will be installed, and Conky will be launched with the configured settings next time you boot up.
